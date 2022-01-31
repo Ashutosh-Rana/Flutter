@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_declarations
     final imageUrl =
         "https://avatars.githubusercontent.com/u/87069070?s=400&u=769de19d6d17325cf6b649b3ec3687d754409c89&v=4";
     return Drawer(
