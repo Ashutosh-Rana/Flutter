@@ -10,9 +10,9 @@ class CatalogModel{
       color: "#33505a",
       image:
           "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-pro-r1.jpg")
-];
+      ];
 }
-
+    
 class Item {
   final int id;
   final String name;
