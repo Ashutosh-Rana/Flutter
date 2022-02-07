@@ -1,0 +1,68 @@
+{
+    "products":[
+        {
+            "id":1,
+            "name":"iPhone 12 pro",
+            "desc":"12th gen",
+            "price":100,
+            "color":"#33505a",
+            "image":"https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-pro-r1.jpg"
+        },
+        {
+            "id":2,
+            "name":"pixel 5",
+            "desc":"5th gen",
+            "price":200,
+            "color":"#00ac51",
+            "image":"https://www.notebookcheck.net/typo3temp/_processed_/b/2/csm_4_zu_3_Teaser_Google_Pixel_5_ab99411c8f.jpg"
+        },
+        {
+            "id":3,
+            "name":"Macbook Air",
+            "desc":"7th gen",
+            "price":1000,
+            "color":"#e0bfae",
+            "image":"https://images.macrumors.com/t/rWl5IHswJZlYDz3b4aYIA4KL8jo=/800x0/smart/article-new/2013/09/macbook_air_trio_transparent.png?lossy"
+        },
+        {
+            "id":4,
+            "name":"playstation 5",
+            "desc":"7th gen",
+            "price":400,
+            "color":"#544ee4",
+            "image":"https://i.gadgets360cdn.com/large/ps5_review_full-3_1612247461981.jpg?downsize=950:*"
+        },
+        {
+            "id":5,
+            "name":"Airpods pro",
+            "desc":"1st gen",
+            "price":300,
+            "color":"#e3e4e9",
+            "image":"https://i.gadgets360cdn.com/products/headphones-and-headsets/large/apple-airpods-pro-ture-wireless-earphones-832X558-1598517589.jpg?downsize=*:180"
+        },
+        {
+            "id":6,
+            "name":"iPad pro",
+            "desc":"2020 edition",
+            "price":900,
+            "color":"#f73984",
+            "image":"https://i.gadgets360cdn.com/large/ipad_pro_2021_11_inch_M1_cover_gadgets_360_1627474241352.jpg?downsize=950:*"
+        },
+        {
+            "id":7,
+            "name":"Galaxy S21 Ultra",
+            "desc":"2021 edition",
+            "price":800,
+            "color":"#1c1c1c",
+            "image":"https://i.gadgets360cdn.com/large/samsung_galaxy_s21_series_1610637306417.jpg?downsize=950:*"
+        },
+        {
+            "id":8,
+            "name":"Redmi note 10 pro",
+            "desc":"2020 edition",
+            "price":700,
+            "color":"#7c95eb",
+            "image":"https://i.gadgets360cdn.com/large/redmi_note_10_pro_max_cover_ndtv_1617205304432.jpg?downsize=950:*"
+        }
+    ]
+}
