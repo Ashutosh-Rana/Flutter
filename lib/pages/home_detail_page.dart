@@ -1,5 +1,9 @@
+import 'dart:math';
+
 import 'package:first_app/models/catalog.dart';
+import 'package:first_app/utils/routes.dart';
 import 'package:first_app/widgets/themes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -8,59 +12,71 @@ class HomeDetailPage extends StatelessWidget {
   const HomeDetailPage({
     Key? key,
     required this.catalog,
-  }) :
-  // ignore: unnecessary_null_comparison
-  assert(catalog!=null), super(key: key);
-  
+  })  :
+        // ignore: unnecessary_null_comparison
+        assert(catalog != null),
+        super(key: key);
+  final String random =
+      "ajsdjhhrbfbnerjherbef j3rf3333mf jhe r evj ewjbe fff ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff rj hjerh jv jvjhe3bf3k vj v3hkhj2 ff k32k23 fk3f 3qklq vk e";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //resizeToAvoidBottomInset: false,
-      
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyTheme.creamColor,
+      
       bottomNavigationBar: Container(
         color: Colors.white,
         child: ButtonBar(
-                  alignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    "\$${catalog.price}".text.bold.xl4.red800.make(),
-                    ElevatedButton(onPressed: (){},
+          alignment: MainAxisAlignment.spaceBetween,
+          children: [
+            "\$${catalog.price}".text.bold.xl4.red800.make(),
+            ElevatedButton(
+                    onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor:MaterialStateProperty.all(
+                      backgroundColor: MaterialStateProperty.all(
                         MyTheme.darkBluishColor,
+                      ),
+                      shape: MaterialStateProperty.all(const StadiumBorder()),
                     ),
-                    shape: MaterialStateProperty.all(const StadiumBorder()),),
-                    child: "Buy".text.make()).wh(100, 50)
-                    ],
-                ).p16(),
+                    child: "Add to cart".text.make()).wh(120, 50)
+          ],
+        ).p16(),
       ),
       body: SafeArea(
         bottom: false,
-        child: Column(children: [
-          Hero(
-            tag: Key(catalog.id.toString()),
-            child: Image.network(catalog.image).p16().h32(context)),
+        child: Column(
+          children: [
+            Hero(
+                tag: Key(catalog.id.toString()),
+                child: Image.network(catalog.image).p16().h32(context)),
             Expanded(
               child: VxArc(
-              height: 30.0,
-              arcType: VxArcType.CONVEY,
-              edge: VxEdge.TOP,
-            child: Container(
-              color: Colors.white,
-              width: context.screenWidth,
-              // height:context.screenHeight,
-              child: SingleChildScrollView(
-                  child: Column(
-                  children: [
-                    catalog.name.text.xl4.bold.color(MyTheme.darkBluishColor).make(),
-                    catalog.desc.text.xl.make(),
-                    10.heightBox,
-                  ],
-                ).py64(),
+                height: 30.0,
+                arcType: VxArcType.CONVEY,
+                edge: VxEdge.TOP,
+                child: Container(
+                  color: Colors.white,
+                  width: context.screenWidth,
+                  // height:context.screenHeight,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        catalog.name.text.xl4.bold
+                            .color(MyTheme.darkBluishColor)
+                            .make(),
+                        catalog.desc.text.xl.make(),
+                        10.heightBox,
+                        random.text.make().p16(),
+                      ],
+                    ).py64(),
+                  ),
+                ),
               ),
-            ),),)
-        ],),
+            )
+          ],
+        ),
       ),
     );
   }
