@@ -24,10 +24,10 @@ class HomeDetailPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -36,7 +36,8 @@ class HomeDetailPage extends StatelessWidget {
                     onPressed: () {},
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(
-                        MyTheme.darkBluishColor,
+                        // ignore: deprecated_member_use
+                        context.theme.buttonColor,
                       ),
                       shape: MaterialStateProperty.all(const StadiumBorder()),
                     ),
@@ -57,18 +58,18 @@ class HomeDetailPage extends StatelessWidget {
                 arcType: VxArcType.CONVEY,
                 edge: VxEdge.TOP,
                 child: Container(
-                  color: Colors.white,
+                  color: context.cardColor,
                   width: context.screenWidth,
                   // height:context.screenHeight,
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
                         catalog.name.text.xl4.bold
-                            .color(MyTheme.darkBluishColor)
+                            .color(context.accentColor)
                             .make(),
                         catalog.desc.text.xl.make(),
                         10.heightBox,
-                        random.text.make().p16(),
+                        random.text.caption(context).make().p16(),
                       ],
                     ).py64(),
                   ),
