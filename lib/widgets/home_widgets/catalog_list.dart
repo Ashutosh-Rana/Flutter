@@ -1,7 +1,7 @@
 import 'package:first_app/models/catalog.dart';
 import 'package:first_app/pages/home_detail_page.dart';
 import 'package:first_app/widgets/home_widgets/catalog_image.dart';
-import 'package:first_app/widgets/themes.dart';
+// import 'package:first_app/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
