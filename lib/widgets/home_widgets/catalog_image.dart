@@ -17,6 +17,6 @@ class CatalogImage extends StatelessWidget {
         .color(context.canvasColor)
         .make()
         .p16()
-        .w40(context);
+        .wh(150, 120);
   }
 }
