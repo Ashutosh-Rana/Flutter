@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:first_app/models/catalog.dart';
 import 'package:first_app/utils/routes.dart';
+import 'package:first_app/widgets/home_widgets/add_to_cart.dart';
 import 'package:first_app/widgets/themes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -32,16 +33,7 @@ class HomeDetailPage extends StatelessWidget {
           alignment: MainAxisAlignment.spaceBetween,
           children: [
             "\$${catalog.price}".text.bold.xl4.red800.make(),
-            ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                        // ignore: deprecated_member_use
-                        context.theme.buttonColor,
-                      ),
-                      shape: MaterialStateProperty.all(const StadiumBorder()),
-                    ),
-                    child: "Add to cart".text.make()).wh(120, 50)
+            AddToCart(catalog: catalog,)
           ],
         ).p16(),
       ),

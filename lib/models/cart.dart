@@ -20,8 +20,8 @@ class CartModel {
   num get totalPrice =>
       items.fold(0, (total, current) => total + current.price);
 
-  void add(Item item) {
-    _itemsId.add(item.id);
+  void add(Item? item) {
+    _itemsId.add(item!.id);
   }
 
   void remove(Item item) {
